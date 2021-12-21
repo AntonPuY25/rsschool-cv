@@ -42,3 +42,15 @@ Work in the company macron CRM 8 months. Using such tools as React, Redux, TypeS
 
 
 ## Education
+
+---
+### Courses:
+>HTML Academy</br>
+> Learn-js</br>
+> It-Inkubator
+
+## English
+
+---
+
+**A2** (In progress)
