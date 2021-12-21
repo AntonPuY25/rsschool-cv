@@ -28,3 +28,17 @@ I am reliable and dependable and often seek new responsibilities within a wide r
 ##Code Example
 
 ---
+
+```JavaScript
+function fib(n) {
+  return n <= 1 ? n : fib(n - 1) + fib(n - 2);
+}
+fib(3)
+```
+## Experience
+
+---
+Work in the company macron CRM 8 months. Using such tools as React, Redux, TypeScript.
+
+
+## Education
