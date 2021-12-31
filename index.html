@@ -2,23 +2,249 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Anton Kliashchonak</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="style.css">
-    <script src="http://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>
-    <script src="js/parallaxsoon.js" type="text/javascript"></script>
 </head>
 <body>
-<canvas id="pixie"></canvas>
-<div class="container">
-    <header class="header_container">
-        <div class="header_left_side">
-            <img src="img/ava2.jpg" alt="photo_ava">
+<header class="red">
+    <div class="header_left"></div>
+    <div class="header_right"></div>
+    <div class="header_container">
+        <div class="header_container_left">
+            <img src="img/ava2.png" alt="Photo">
         </div>
-        <div class="header_right_side">
-         <h1>I a'm Anton Kliashonak</h1>
+        <div class="header_container_right">
+            <div class="header_name">
+                <h1><span>Kliashchonak</span> Anton</h1>
+                <h3>Front-end developer</h3>
+            </div>
+            <hr/>
+            <ul class="header_contacts">
+                <li class="header_contacts_item">
+                    <h4>Location</h4>
+                    <address>Minsk, Belarus</address>
+                </li>
+                <li class="header_contacts_item">
+                    <h4>Phone number</h4>
+                    <p>+375(25)937-20-45</p>
+                </li>
+                <li class="header_contacts_item">
+                    <h4>Email</h4>
+                    <p>
+                        <a href="mailto:puy25@bk.ru" >puy25@bk.ru </a>
+                    </p>
+                </li>
+            </ul>
         </div>
-    </header>
-</div>
+    </div>
+</header>
 
+<main class="main">
+    <section class="about_me">
+        <div class="aboutme_left"></div>
+        <div class="aboutme_right"></div>
+        <div class="main_container_aboutme">
+            <div class="main_container_left">
+                <div class="about_me_title">
+                    <h2 class=""><b>About me</b></h2>
+                    <h3 class="">A few words</h3>
+                </div>
+            </div>
+            <div class="main_container_right_aboutme">
+                <div class="about_me_subtitle">
+                <p>Front-end developer with experience
+                    in creating SPA using React, Redux,
+                    TS, HTML, CSS. Determined to
+                    become a Full stack developer. Spend
+                    my free time improving competence in
+                    English, and expanding my
+                    professional horizons. Self-motivated,
+                    hard-working, responsible and
+                    competent.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="skills">
+        <div class="skills_left"></div>
+        <div class="skills_right"></div>
+        <div class="main_container_skills">
+            <div class="main_container_left">
+                <div class="skills_title">
+                    <h2><b>Skills</b></h2>
+                    <h3>In progress</h3>
+                </div>
+            </div>
+            <div class="main_container_right_skills">
+               <div class="skills_subtitle">
+                <ul class="skills_grid">
+                    <li class="skills_box">
+                        <h4>HTML</h4>
+                        <p>80%</p>
+                        <div class="skills_bar">
+                            <div class="skills_bar_html"></div>
+                        </div>
+                    </li>
+                    <li class="skills_box">
+                        <h4>CSS/SASS</h4>
+                        <p>70%</p>
+                        <div class="skills_bar">
+                            <div class="skills_bar_css"></div>
+                        </div>
+                    </li>
+                    <li class="skills_box">
+                        <h4>JAVASCRIPT</h4>
+                        <p>70%</p>
+                        <div class="skills_bar">
+                            <div class="skills_bar_java"></div>
+                        </div>
+                    </li>
+                    <li class="skills_box">
+                        <h4>GIT</h4>
+                        <p>50%</p>
+                        <div class="skills_bar">
+                            <div class="skills_bar_git"></div>
+                        </div>
+                    </li>
+                    <li class="skills_box">
+                        <h4>REACT+ REDUX</h4>
+                        <p>70%</p>
+                        <div class="skills_bar">
+                            <div class="skills_bar_react"></div>
+                        </div>
+                    </li>
+                    <li class="skills_box">
+                        <h4>FIGMA</h4>
+                        <p>70%</p>
+                        <div class="skills_bar">
+                            <div class="skills_bar_figma"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="code">
+        <div class="code_left"></div>
+        <div class="code_right"></div>
+        <div class="main_container_code">
+            <div class="main_container_left">
+                <div class="code_title">
+                    <h2><b>Code example</b></h2>
+                    <h3>From random task</h3>
+                </div>
+            </div>
+        <div class="main_container_right_code">
+            <pre>
+                <code>
+   export const getFilteringField = (dealsByDate: Deal[], filterField: string) =>
+        dealsByDate.reduse(
+            (acc: SelectedDateDeals, currentValue: Deal | CommonDeal) => {
+                if (currentValue) {
+                    const getDate = (value: string) => {
+                        switch (value) {
+                            case FilteringDate.Dt_kanban_column:
+                               return currentValue.dt_kanban_column;
+                            case FilteringDate.Updated_at:
+                               return currentValue.updated_at;
+                            case FilteringDate.Event_time:
+                               return currentValue.event_time;
+                            default:
+                               return currentValue.event_time;
+                        }
+                    };
+                    const createdDealDate = moment(
+                       getDate(filterField) as string,
+                       DEFAULT_DATE,
+                    ).format(DEFAULT_DATE);
+                    if (!acc[createdDealDate]) {
+                        acc[createdDealDate] = [];
+                    }
+                    acc[createdDealDate].push(currentValue);
+                }
+                return acc;
+            },
+            {},
+        );
+                </code>
+            </pre>
+        </div>
+        </div>
+    </section>
+    <section class="education">
+        <div class="education_left"></div>
+        <div class="education_right"></div>
+        <div class="main_container_education">
+            <div class="main_container_left">
+                <div class="education_title">
+                    <h2><b>Education</b></h2>
+                    <h3>Still will</h3>
+                </div>
+            </div>
+        <div class="main_container_right_education">
+            <article class="education_college">
+                <h4 class="test">College:</h4>
+                <p class="test">ELECTRICAL TECHNICIAN FIBER OPTIC COMMUNICATION</p>
+                <p class="test">Brest State Railway College </p>
+            </article>
+            <article class="education_courses">
+                <h4 class="test">Courses:</h4>
+                <ul class="test">
+                    <li>IT-Incubator </li>
+                    <li>IT-MyFreedom </li>
+                    <li>HTML-Academy </li>
+                </ul>
+            </article>
+        </div>
+    </div>
+    </section>
+    <section class="english">
+        <div class="english_left"></div>
+        <div class="english_right"></div>
+        <div class="main_container_english">
+            <div class="main_container_left">
+                <div class="english_title">
+                    <h2><b>English</b></h2>
+                    <h3>A2+</h3>
+                </div>
+            </div>
+            <div class="main_container_right_english">
+                <div class="english_subtitle">
+                    <p>I communicate on everyday topics, can write letters and understand simple speech.
+                    I practice English every day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer_container">
+        <div class="footer_top">
+            <ul class="footer_links">
+                <li class="footer_items">
+                    <a class="footer_linkedin" href="https://www.linkedin.com/in/anton-kliaschonak-395896202/" target="_blank"></a>
+                </li>
+                <li class="footer_items">
+                    <a class="footer_telegram" href="https://tlgg.ru/@PuY27" target="_blank"></a>
+                </li>
+                <li class="footer_items">
+                    <a class="footer_rsschool" href="https://rs.school/js/" target="_blank"></a>
+                </li>
+                <li class="footer_items">
+                    <a class="footer_codewars" href="https://www.codewars.com/users/PuY25" target="_blank"></a>
+                </li>
+                <li class="footer_items">
+                    <a class="footer_githab" href="https://github.com/AntonPuY25" target="_blank"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer_bottom">
+            <h6>Anton Kliashchonak 2022</h6>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
