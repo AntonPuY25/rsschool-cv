@@ -38,9 +38,16 @@ body{
     z-index: 2;
 }
 .header_container img{
-    width: 250px;
+    width: 350px;
     height: 250px;
     border-radius: 50%;
+}
+
+@media screen and (max-width: 1350px) {
+    .header_container img{
+        width: 250px;
+        height: 150px;
+    }
 }
 .header_container_right{
     width: 70%;
@@ -289,12 +296,10 @@ hr{
     width: 70%;
     z-index: 2;
     background-color: #2b2c2c;
-    padding: 1.75rem 1.75rem 1.75rem;
+    padding: 1.75rem;
 }
 pre{
     width: 100%;
-    padding: 1.75rem 1.75rem 1.75rem;
-    margin: 12px 30px 12px 30px;
     background-color: #979899;
     border-radius: 3px;
     overflow: auto;
